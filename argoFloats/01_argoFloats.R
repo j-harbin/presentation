@@ -44,7 +44,7 @@ cycles <- argosP[["argos"]]
 
 for (icycle in seq_along(cycles)) {
     thisCycle <- cycles[[icycle]]
-    badLevel <- as.vector(thisCycle[['salinityFlag']]) %in% badFlag
+    badLevel <- as.vector(thisCycle[["salinityFlag"]]) %in% badFlag
     badCycle <- any(badLevel)
     if (badCycle) {
         message("Float ID ", thisCycle[["ID"]], " at cycle position ", icycle," ie. cycle number ", thisCycle[["cycleNumber"]]," is flagged bad at levels: ", paste(which(badLevel), collapse=" "))
